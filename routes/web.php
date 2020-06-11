@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/student/rank','StudentController@getrank')->name('student.rank');
+Route::resources(['student'=>'StudentController',
+        'studentdetail'=>'StudentDetailController'
+]);
+
